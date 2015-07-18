@@ -1,6 +1,5 @@
 var app = angular.module('app', []);
 	app.controller('BitController', ['$scope', '$http', function ($scope, $http) {
-		$scope.results = "";
 		$scope.getPrice = function()
 		{
 			console.log("hola");
@@ -28,5 +27,4 @@ var app = angular.module('app', []);
 			})
 
 		}
-
 }]);
