@@ -7,11 +7,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     <script src="app.js"></script>
 </head>
+
 <body ng-app="app">
-    <div class="container" ng-controller="PhotoController">
-        <h1>{{a}}</h1>
-        <input type="button" value="incrementar" ng-click="incrementar()">
-    </div>
+    <div class="container" ng-controller="BitController">
+    <input type="text" ng-model="bitcoins">
+    <input type="button" ng-click="getPrice()" value="Obtener bitcoins">
+    <input type="text" ng-model="price">
+
+  </div>
 </body>
 	
 </html>
