@@ -6,12 +6,12 @@ var app = angular.module('app', []);
 			console.log("hola");
 			options = {
 				url: "https://montanaflynn-bitcoin-exchange-rate.p.mashape.com/prices/buy",
-				method: "GET",
+				method: 'GET',
 				headers: {
 					'X-Mashape-Key':'yvU0GDeVzomshLIpyOJyuOq7BQxbp1k6xcGjsnerwWf9tuSgD9',
 					"Accept": "text/plain"
 				},
-				data: {
+				params: {
 					qty: '5',
 				}
 			};
