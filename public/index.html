@@ -3,18 +3,36 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>AngularJS Tutorial</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-    <script src="app.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.js"></script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/bitController.js"></script>
+    <script src="js/routes.js"></script>
+
 </head>
 
 <body ng-app="app">
-    <div class="container" ng-controller="BitController">
-    <input type="text" ng-model="bitcoins">
-    <input type="button" ng-click="getPrice()" value="Obtener bitcoins">
-    <input type="text" ng-model="price">
+    <div class="container">
+        <div class="jumbotron">
+            <h1> Demo de angular </h1>
+            <h2> Transformador de bitcoins
+            a dolares y dolares a bitcoins </h2>
+            <hr>
+            <p> La tasa de compra y de venta no son iguales, get over it. </p>
 
-  </div>
+        </div>
+
+        <a href="#/"> Comprar </a>
+        <a href="#/sell"> Vender </a>
+
+        <div ng-view class="well">
+        </div>
+    </div>
 </body>
-	
+
 </html>
