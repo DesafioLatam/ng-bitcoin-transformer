@@ -1,13 +1,9 @@
-angular.module('app').service('BitcoinApiCall', ['$http', function($http){
-	var results = "";
-	exchange = function(method, qty)
-	{
+angular.module('app').service('BitcoinApiCall', ['$http', function($http)
+{  
 
-		if (method == undefined)	{
-			method = "buy";
-		}
-
-		options = {
+  function _options(method,qty){
+  
+  return {
 			url: "https://montanaflynn-bitcoin-exchange-rate.p.mashape.com/prices/" + method,
 			method: 'GET',
 			headers: {
@@ -18,20 +14,11 @@ angular.module('app').service('BitcoinApiCall', ['$http', function($http){
 				qty: qty,
 			}
 		};
-
-		$http(options)
-		.success(function(data){
-			results = data;
-		})
-		.error(function(data){
-			results = data;
-		})
-		.then(function()
-		{
-			console.log(results)
-			return results;
-
-		})
-	}
+  
+  }
+  
+  this.getExchangePrices = function(method,qty){  
+  	return $http(_options(method, qty));
+  };
 
 }]);
